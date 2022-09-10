@@ -67,34 +67,39 @@ body{
 }
 
 /* center */
-.center-img-size{
+
+.central-images{
+justify-content: space-between;
+}
+
+.central-images>img:first-child{
   height: 30vh;
   margin-left: -3vh;
   margin-top: 4vh;
 }
-
+.central-images>img:last-child{
+  height: 30vh;
+  margin-right: -3vh;
+  margin-top: 4vh;
+}
 /* Footer */
 
 .bottom{
   position: absolute;
   bottom:0;
+  left:0;
+  right:0;
   width: 100%;
   }
 
 .image-spacing{
   bottom: -5vh;
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+  position: relative;
+  height: 30vh;
 }
-
 
 /* Utilities */
-.footer-img-size{
-  height: 30vh;
-  margin-bottom: 0vh;
-}
+
 
 .flex{
   display: flex;
