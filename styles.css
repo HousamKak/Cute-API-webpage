@@ -83,7 +83,7 @@ justify-content: space-between;
 
 /* Main Content */
 
-.main-text-container{
+.main-text-container-first-section{
 position: relative;
 width: 50%;
 height: 10%;
@@ -95,7 +95,7 @@ display: flex;
 align-items: center;
 }
 
-.main-text{
+.main-text-first-section{
   font-family: 'Shiny-Flakes-DEMO';
   font-size:large;
   font-weight:normal;
@@ -104,10 +104,42 @@ align-items: center;
   
 }
 
-.span-text{
+.span-text-first-section{
   font-family: 'PORKYS_';
   color:#983369;
 }
+
+/* Second Main */
+.main-container-second-section{
+  position: absolute;
+  height: 8vh;
+  width: 50%;
+ transform: translate(100%,-35vh);
+}
+
+.name-label{
+background: #FFB0BE;
+border-radius: 30px;
+width: 13%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Shiny-Flakes-DEMO';
+letter-spacing: 2px;
+font-weight: bold;
+
+}
+
+.name-input-box{
+  border-radius: 30px;
+  background: #FFB0BE;
+  border-width: 0vh;
+  margin-left: 2vh;
+  width: 20%;
+  text-align: center;
+
+}
+
 
 
 /* Footer */
