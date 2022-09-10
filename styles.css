@@ -87,8 +87,8 @@ justify-content: space-between;
 position: relative;
 width: 50%;
 height: 10%;
-/* left: 333px;
-top: 447px; */
+transform: translate(50%,-40vh);
+
 background: #FFB0BE;
 border-radius: 50px;
 display: flex;
@@ -102,6 +102,11 @@ align-items: center;
   letter-spacing: 2px;
   text-align: center;
   
+}
+
+.span-text{
+  font-family: 'PORKYS_';
+  color:#983369;
 }
 
 
@@ -133,4 +138,9 @@ align-items: center;
 @font-face {
   font-family: 'Shiny-Flakes-DEMO';
   src: url(/fonts/Shiny-Flakes-DEMO.ttf);
+}
+
+@font-face {
+  font-family: 'PORKYS_';
+  src: url(/fonts/PORKYS_.TTF);
 }
