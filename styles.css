@@ -11,3 +11,13 @@
 body{
 background-color:pink;
 }
+
+.text{
+  font-family: 'puppylike';
+  font-size:large;
+}
+
+@font-face {
+  font-family: 'puppylike';
+  src: url(/fonts/PORKYS_.TTF);
+}
