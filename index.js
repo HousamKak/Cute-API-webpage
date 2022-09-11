@@ -7,7 +7,6 @@ const boxInput = document.querySelector('#Name');
 
 const thirdsection=document.querySelector('#Third-section')
 const items = thirdsection.querySelectorAll(".answer-display-box");
-console.log(items)
 text1 = document.createElement('p')
 text2 = document.createElement('p')
 text3 = document.createElement('p')
@@ -46,12 +45,14 @@ boxInput.addEventListener('input', (event) => {
 
     fetch(GenderAPI)
     .then(x=> x.json())
-    .then(y => contentText1.textContent=y.gender)
+    .then(y => {contentText1.textContent=y.gender})
 
-    // fetch(NationAPI)
-    // .then(x=> x.json())
-    // .then(y => =y.)
-    
-    // contentText2.textContent
-    // contentText3.textContent
-})
+    fetch(NationAPI)
+    .then(x=> x.json())
+    .then(y => {
+        countries='';
+        for(let i=0;i<y.country.length;i++)
+        {countries+=y.country[i].country_id+" prob: "+y.country[0].probability+'\n';}
+        console.log(countries);
+        contentText3.textContent=countries})
+    })
