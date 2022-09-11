@@ -184,6 +184,11 @@ margin-bottom: 2vh;
   align-items: center;
 }
 
+.textStyle{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 /* section four */
 
 .last-image{
