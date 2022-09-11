@@ -26,14 +26,7 @@ item3.appendChild(contentText3);
 
 
 NationAPI='https://api.nationalize.io/?name=ali'
-// Age
-fetch(AgeAPI)
-.then(x=> x.json())
-.then(y => console.log(y))
-// // gender
-// fetch(GenderAPI)
-// .then(x=> x.json())
-// .then(y => console.log(y))
+
 // // Nationality
 fetch(NationAPI)
 .then(x=> x.json())
