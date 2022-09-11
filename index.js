@@ -1,3 +1,4 @@
+// This is the dog image
 const dogImage=document.querySelector('#dog-image');
 fetch('https://dog.ceo/api/breeds/image/random')
 .then(x=> x.json())
@@ -5,6 +6,8 @@ fetch('https://dog.ceo/api/breeds/image/random')
 
 const boxInput = document.querySelector('#Name');
 
+// Here I am appending a p node then a text node to each of the boxes that I want to write the age, gender, and nationality in. This looks stupid
+// to do, I am sure there is a more efficient method, but this is how it worked for the time being
 const thirdsection=document.querySelector('#Third-section')
 const items = thirdsection.querySelectorAll(".answer-display-box");
 text1 = document.createElement('p')
@@ -24,21 +27,16 @@ item2.appendChild(contentText2);
 item3.appendChild(contentText3);
 
 
-NationAPI='https://api.nationalize.io/?name=ali'
-
-// // Nationality
-fetch(NationAPI)
-.then(x=> x.json())
-.then(y => console.log(y))
-
-
-
 boxInput.addEventListener('input', (event) => {
+
+    // Including the name in the API
     const input = event.target.value;
     const items = thirdsection.querySelectorAll(".answer-display-box");
     AgeAPI='https://api.agify.io/?'+"name="+input
     GenderAPI='https://api.genderize.io/?'+"name="+input
     NationAPI='https://api.nationalize.io/?'+"name="+input
+
+    // Fetching APIs
     fetch(AgeAPI)
     .then(x=> x.json())
     .then(y => contentText2.textContent=y.age)
@@ -47,6 +45,7 @@ boxInput.addEventListener('input', (event) => {
     .then(x=> x.json())
     .then(y => {contentText1.textContent=y.gender})
 
+    // Here I am trying to put all the nationalities
     fetch(NationAPI)
     .then(x=> x.json())
     .then(y => {
